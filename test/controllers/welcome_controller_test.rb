@@ -3,7 +3,7 @@ require 'test_helper'
 class WelcomeControllerTest < ActionController::TestCase
   test "index should redirect to login page if user not signed in" do
     get :index
-    assert_response :redirect
+    assert_response :success
     assert_redirected_to new_user_session_path
   end
 
